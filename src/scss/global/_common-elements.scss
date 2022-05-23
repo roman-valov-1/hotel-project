@@ -1,0 +1,31 @@
+%button {
+   display: block;
+   text-align: center;
+   border-radius: 22px;
+   padding: 9px 20px 10px 20px;
+   font-size: 12px;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-weight: 700;
+}
+
+%button-transparent {
+   background-color: #fff;
+   border: 2px solid $purple;
+   color: $purple;
+   &:hover {
+      color: $green;
+      border: 2px solid $green;
+      transition: 0.3s all ease;
+   }
+}
+
+%button-purple {
+   background: $primaryGradient;
+   padding-top: 11px;
+   color: #fff;
+   &:hover {
+      background: $secondaryGradient;
+      transition: 0.3s all ease;
+   }
+}
