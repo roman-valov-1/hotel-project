@@ -1,0 +1,140 @@
+.footer {
+   &__line {
+      border-top: 1px solid #E5E5E5;
+   }
+   &__info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 80px 0px 100px 0px;
+      flex-wrap: wrap;
+   }
+
+   &__logo {
+      flex: 0 1 280px;
+      padding: 20px 10px 0px 10px;
+   }
+
+   &__logo-image {
+      margin-bottom: 20px;
+   }
+
+   &__logo-info {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+   &__links {
+      padding: 20px 15px 0px 15px;
+   }
+
+   &__info-title {
+      cursor: default;
+   }
+
+   &__links-list {
+   }
+
+   &__links-item {
+      margin-top: 20px;
+      a {
+         @extend %default-link;
+      }
+   }
+
+   &__subscribe {
+      flex: 0 1 280px;
+      padding: 20px 10px 0px 10px;
+   }
+
+   &__subscribe-info {
+      margin: 20px 0px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+   &__subscribe-form {
+      position: relative;
+   }
+
+   &__subscribe-input {
+      width: 100%;
+      min-height: 44px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: $dark;
+      outline: none;
+      border: 1px solid $dark25;
+      border-radius: 4px;
+      padding: 12px 45px 8px 15px;
+      overflow: hidden;
+   }
+
+   &__subscribe-button {
+      position: absolute;
+      right: 0;
+      top: 10px;
+   }
+
+   &__footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 70px;
+   }
+
+   &__footer-license {
+   }
+
+   &__footer-socialmedia {
+      a {
+         display: inline-block;
+         margin-left: 20px;
+      }
+   }
+}
+
+@media (max-width: 767.98px) {
+   .footer {
+      padding: 20px;
+      &__line,
+      &__logo-info,
+      &__links,
+      &__subscribe {
+         display: none;
+      }
+      &__logo {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 0px;
+      }
+      &__info {
+         justify-content: center;
+         align-items: flex-start;
+         padding: 20px 0px;
+      }
+      &__footer {
+         display: flex;
+         flex-direction: column;
+         justify-content: initial;
+         align-items: center;
+      }
+   
+      &__footer-license {
+         text-align: center;
+         padding-bottom: 25px;
+      }
+   
+      &__footer-socialmedia {
+         a:first-child {
+            margin-left: 0px;
+         }
+      }
+   }
+}

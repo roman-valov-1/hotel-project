@@ -13,7 +13,6 @@ function closeAllSubMenu() {
 }
 
 document.querySelector('.header__burger').onclick = function(event) {
-   document.body.classList.toggle('_lock');
    event.target.classList.toggle('header__burger_active');
    menuBody.classList.toggle('header__menu_active');
 };

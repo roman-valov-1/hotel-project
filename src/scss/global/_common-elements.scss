@@ -4,6 +4,7 @@
    border-radius: 22px;
    padding: 9px 20px 10px 20px;
    font-size: 12px;
+   line-height: 15px;
    text-decoration: none;
    text-transform: uppercase;
    font-weight: 700;
@@ -27,5 +28,18 @@
    &:hover {
       background: $secondaryGradient;
       transition: 0.3s all ease;
+   }
+}
+
+%default-link {
+   color: $dark50;
+   text-decoration: none;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 17px;
+   &:hover {
+      color: $dark75;
+      font-weight: 700;
+      transition: 0.3s ease all;
    }
 }
