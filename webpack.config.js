@@ -1,3 +1,5 @@
+const path = require('path');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -9,12 +11,25 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = {
    mode: mode,
+   entry: {
+      bundle: path.resolve(__dirname, './src/index.js'),
+   },
    output: {
+      path: path.resolve(__dirname, 'dist'),
       filename: '[name].[contenthash].js',
-      assetModuleFilename: "assets/[hash][ext][query]",
+      assetModuleFilename: "assets/[name][ext][query]",
       clean: true,
    },
    devtool: 'source-map',
+   devServer: {
+      static: {
+         directory: path.resolve(__dirname, 'dist'),
+      },
+      port: 3000,
+      open: true,
+      hot: true,
+      compress: true,
+   },
    optimization: {
       splitChunks: {
          chunks: 'all'
@@ -44,6 +59,12 @@ module.exports = {
                   options: {
                      postcssOptions: {
                         plugins: [
+                           [
+                              "autoprefixer",
+                              {
+                                 //Options
+                              }
+                           ],
                            [
                               "postcss-preset-env",
                               {

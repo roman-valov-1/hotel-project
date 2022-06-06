@@ -6,6 +6,7 @@
    justify-content: space-between;
 }
 .header {
+   background: #fff;
    &__logo {
    }
    &__burger {
@@ -24,25 +25,49 @@
 
    &__submenu {
       display: none;
+      width: max-content;
       position: absolute;
+      top: 30px;
+      background-color: #fff;
+      border: 1px solid $purple;
       &.header__submenu_active {
          display: block;
       }
    }
 
    &__submenu-item {
-      margin-top: 15px;
+      padding: 10px;
+      border-bottom: 1px solid $purple;
+      &:last-child {
+         border: none;
+      }
    }
 
    &__list-item {
       flex: 1 0 content;
       margin-right: 20px;
+      position: relative;
       a,
       span {
          @extend %default-link;
       }
       span {
+         padding-right: 20px;
          cursor: pointer;
+         &:after {
+            content: '';
+            background: url('./../assets/header-menu-arrow.svg');
+            position: absolute;
+            width: 12px;
+            height: 8px;
+            right: 3px;
+            top: 4px;
+         }
+         &.active {
+            &:after {
+               transform: rotate(180deg);
+            }
+         }
       }
    }
 
@@ -54,11 +79,16 @@
    &__button {
       margin-right: 20px;
       @extend %button;
+      padding: 8px 20px 8px 20px;
       &.header__button_transparent {
          @extend %button-transparent;
       }
       &.header__button_purple {
          @extend %button-purple;
+         padding-top: 10px;
+         &::after {
+            display: none;
+         }
       }
    }
 }

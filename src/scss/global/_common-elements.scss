@@ -2,12 +2,14 @@
    display: block;
    text-align: center;
    border-radius: 22px;
-   padding: 9px 20px 10px 20px;
+   padding: 14px 20px 15px 20px;
    font-size: 12px;
    line-height: 15px;
    text-decoration: none;
    text-transform: uppercase;
    font-weight: 700;
+   border: none;
+   cursor: pointer;
 }
 
 %button-transparent {
@@ -23,11 +25,20 @@
 
 %button-purple {
    background: $primaryGradient;
-   padding-top: 11px;
    color: #fff;
+   position: relative;
    &:hover {
       background: $secondaryGradient;
       transition: 0.3s all ease;
+   }
+   &::after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      right: 13px;
+      top: 13px;
+      background: url('./../assets/arrow_forward.svg')
    }
 }
 
@@ -41,5 +52,23 @@
       color: $dark75;
       font-weight: 700;
       transition: 0.3s ease all;
+   }
+}
+
+%default-input {
+   width: 100%;
+   min-height: 44px;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 18px;
+   color: $dark;
+   outline: none;
+   border: 1px solid $dark25;
+   border-radius: 4px;
+   padding: 12px 15px 12px 15px;
+   overflow: hidden;
+   &:hover,
+   &:focus{
+      border: 1px solid $dark50;
    }
 }
