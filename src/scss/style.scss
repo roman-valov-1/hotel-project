@@ -39,6 +39,9 @@ body {
    line-height: 17px;
    color: $dark75;
    background-color: #E5E5E5;
+   &.lock {
+      overflow: hidden;
+   }
 }
 .wrapper {
    min-height: 100%;
@@ -62,3 +65,4 @@ body {
 @import "../components/header/scss/header";
 @import "../components/footer/scss/footer";
 @import "../components/registrationForm/scss/registrationForm";
+@import "../components/apartmentCard/scss/_apartmentCard";

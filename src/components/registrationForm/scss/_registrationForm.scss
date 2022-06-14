@@ -1,7 +1,7 @@
 .registration-form {
    display: flex;
    flex-direction: column;
-   min-width: 380px;
+   max-width: 380px;
    padding: 40px 30px 30px 30px;
    background: #ffffff;
    border: 1px solid rgba(0, 0, 0, 0.12);
@@ -73,9 +73,6 @@
    &__input-date {
       margin-bottom: 20px;
       @extend %default-input;
-      &::-webkit-calendar-picker-indicator {
-         display: none;
-      }
    }
 
    &__switch-block {

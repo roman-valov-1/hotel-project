@@ -146,7 +146,7 @@
          right: -100%;
          width: 320px;
          height: 100%;
-         background-color: $green;
+         background-color: #E5E5E5;
          z-index: 20;
          padding: 70px 15px 0px 15px;
          transition: 0.3s ease;
@@ -174,13 +174,24 @@
          display: none;
          position: relative;
          padding-left: 10px;
+         border: none;
+         top: 10px;
+         background-color: transparent;
          &.header__submenu_active {
             display: block;
          }
       }
    
       &__submenu-item {
-         margin-top: 15px;
+         border: none;
+      }
+   }
+}
+
+@media (max-width: 575.98px) {
+   .header {
+      &__menu {
+         width: 100%;
       }
    }
 }
