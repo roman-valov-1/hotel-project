@@ -8,7 +8,6 @@
    border-radius: 3px;
    &__slider {
       width: 100%;
-      
    }
 
    &__slider-container {
@@ -20,8 +19,8 @@
       display: none;
       img {
          width: 100%;
-         object-fit: cover;
-         height: auto;
+         height: 100%;
+         border-radius: 3px 3px 0px 0px;
       }
    }
 
@@ -29,6 +28,7 @@
    &__slider-btn-next {
       position: absolute;
       top: 50%;
+      transform: translateY(-50%);
       width: 30px;
       height: 30px;
       padding: 5px;

@@ -1,7 +1,7 @@
 .registration-form {
    display: flex;
    flex-direction: column;
-   max-width: 380px;
+   width: 380px;
    padding: 40px 30px 30px 30px;
    background: #ffffff;
    border: 1px solid rgba(0, 0, 0, 0.12);
@@ -144,3 +144,8 @@
    }
 }
 
+@media (max-width: 575.98px) {
+   .registration-form {
+      max-width: 100%;
+   }
+}
