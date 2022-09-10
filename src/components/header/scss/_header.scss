@@ -62,10 +62,11 @@
             height: 8px;
             right: 3px;
             top: 4px;
+            transition: 0.2s;
          }
          &.active {
             &:after {
-               transform: rotate(180deg);
+               transform: rotate(-180deg);
             }
          }
       }

@@ -9,7 +9,6 @@ document.querySelector('.header__list').onclick = function(event) {
 }; 
 
 function closeAllSubMenu() {
-   console.log(Array.from(subMenu));
    Array.from(subMenu).forEach(item => item.classList.remove('.header__submenu_active'));
 }
 

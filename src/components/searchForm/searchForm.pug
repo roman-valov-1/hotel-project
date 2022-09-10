@@ -1,0 +1,40 @@
+form.search-form(action='')
+  h1.search-form__title
+    | Найдём номера под ваши пожелания
+  .search-form__date-section
+    .search-form__date-item
+      h3.search-form__subtitle
+        | прибытие
+      input.search-form__arrival(type='text' name='arrival' placeholder='ДД.ММ.ГГГГ')
+    .search-form__date-item
+      h3.search-form__subtitle
+        | выезд
+      input.search-form__departure(type='text' name='departure' placeholder='ДД.ММ.ГГГГ')
+  h3.search-form__subtitle
+    | гости
+  .search-form__guest-block
+    p Сколько гостей
+    .search-form__guest-dropdown
+      .search-form__dropdown-item
+        label(for='adult') взрослые
+        .search-form__dropdown-counter
+          button.search-form__counter-btn-minus(type='button')
+            | -
+          input#adult(type='text' name='adult' value='0' readonly)
+          button.search-form__counter-btn-plus(type='button')
+            | +
+      .search-form__dropdown-item
+        label(for='children') дети
+        .search-form__dropdown-counter
+          button.search-form__counter-btn-minus(type='button')
+            | -
+          input#children(type='text' name='children' value='0' readonly)
+          button.search-form__counter-btn-plus(type='button')
+            | +
+      .search-form__dropdown-footer 
+        button#dropdown-btn-reset(type='button')
+          | очистить
+        button#dropdown-btn-submit(type='button')
+          | применить            
+  button.search-form__button
+    | подобрать номер
