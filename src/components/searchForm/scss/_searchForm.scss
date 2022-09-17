@@ -5,7 +5,7 @@
    padding: 40px 30px 30px 30px;
    background: #ffffff;
    border: 1px solid rgba(0, 0, 0, 0.12);
-   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+   box-shadow: $borderShadow;
    border-radius: 4px;
    margin-top: 50px;
    &__title {
@@ -22,9 +22,25 @@
 
    &__date-item {
       flex: 0 1 150px;
+      position: relative;
       input {
          width: 100%;
          @extend %default-input;
+      }
+      &:after {
+         content: "";
+         background: url("./../assets/header-menu-arrow.svg") no-repeat center;
+         position: absolute;
+         width: 20px;
+         height: 20px;
+         right: 13px;
+         top: 32px;
+         transition: 0.2s;
+      }
+      &.search-form__date-item_active {
+         &:after {
+            transform: rotate(-180deg);
+         }
       }
    }
 
@@ -40,6 +56,8 @@
    &__guest-block {
       margin-bottom: 30px;
       @extend %default-input;
+      position: relative;
+      overflow: visible;
       p {
          display: block;
          position: relative;
@@ -61,14 +79,39 @@
             }
          }
       }
+      &.search-form__guest-block_active {
+         border: 1px solid $dark50;
+         border-radius: 4px 4px 0px 0px;
+      }
    }
 
    &__guest-dropdown {
       display: none;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
       flex-direction: column;
+      width: calc(100% + 2px);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: $dark;
+      background: #fff;
+      outline: none;
+      border: 1px solid $dark25;
+      border-radius: 4px;
+      padding: 12px 15px 12px 15px;
+      overflow: hidden;
       &.search-form__guest-dropdown_active {
          display: flex;
+         height: max-content;
          cursor: default;
+         border: 1px solid $dark50;
+         border-top: none;
+         border-radius: 0px 0px 4px 4px;
+         top: 43px;
+         left: -1px;
+         z-index: 15;
       }
    }
 
@@ -152,3 +195,14 @@
    }
 }
 
+@media (max-width: 575.98px) {
+   .search-form {
+      max-width: 100%;
+      &__date-item {
+         flex: 0 1 120px;
+         &:after {
+            display: none;
+         }
+      }
+   }
+}

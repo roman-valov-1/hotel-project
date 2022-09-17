@@ -4,35 +4,61 @@ import 'air-datepicker/air-datepicker.css';
 let dpMin = new AirDatepicker('.search-form__arrival', {
    minDate: new Date(),
    autoClose: true,
+   position: "bottom left",
    onSelect({date}) {
       dpMax.update({
          minDate: date
       })
+   },
+   onShow() {
+      dpMin.$el.parentElement.classList.add('search-form__date-item_active'); 
+   },
+   onHide() {
+      dpMin.$el.parentElement.classList.remove('search-form__date-item_active');
    }
 });
 
 let dpMax = new AirDatepicker('.search-form__departure', {
    minDate: new Date(),
    autoClose: true,
+   position: "bottom right",
    onSelect({date}) {
       dpMin.update({
          maxDate: date
       })
+   },
+   onShow() {
+      dpMax.$el.parentElement.classList.add('search-form__date-item_active'); 
+   },
+   onHide() {
+      dpMax.$el.parentElement.classList.remove('search-form__date-item_active');
    }
 });
 
 let guestDropdown = document.querySelector('.search-form__guest-dropdown');
 let guestTitle = document.querySelector('.search-form__guest-block > p');
+let guestBlock = document.querySelector('.search-form__guest-block');
 let dropdownSubmit = document.querySelector('#dropdown-btn-submit');
 let dropdownReset = document.querySelector('#dropdown-btn-reset');
 
 guestTitle.addEventListener('click', (e) => {
    guestDropdown.classList.add('search-form__guest-dropdown_active');
+   guestBlock.classList.add('search-form__guest-block_active');
    guestTitle.classList.add('_active');
 });
 
 dropdownSubmit.addEventListener('click', (e) => {
    guestDropdown.classList.remove('search-form__guest-dropdown_active');
+   guestBlock.classList.remove('search-form__guest-block_active');
+   if (inputAdult.value != 0 && inputChildren.value != 0) {
+      guestTitle.innerHTML = `Взрослые: ${inputAdult.value}, Дети: ${inputChildren.value}`;
+   } else if (inputAdult.value != 0 && inputChildren.value == 0) {
+      guestTitle.innerHTML = `Взрослые: ${inputAdult.value}`;
+   } else if (inputAdult.value == 0 && inputChildren.value != 0) {
+      guestTitle.innerHTML = `Дети: ${inputChildren.value}`;
+   } else {
+      guestTitle.innerHTML = `Сколько гостей`;
+   }
    guestTitle.classList.remove('_active');
 });
 
