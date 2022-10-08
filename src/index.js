@@ -1,7 +1,8 @@
 import './scss/style.scss';
 import './components/header/header.js';
 import './components/apartmentCard/apartmentCard.js';
-import './components/searchForm/searchForm.js';
+// import './components/searchForm/searchForm.js';
+import './components/priceForm/priceForm.js';
 
 import Logo from './assets/Logo.svg';
 import arrowFooter from './assets/arrow_footer.svg';

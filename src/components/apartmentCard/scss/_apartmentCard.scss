@@ -93,6 +93,15 @@
       flex-direction: row;
       h2 {
          display: inline-block;
+         position: relative;
+         padding-left: 20px;
+         &::before {
+            content: "№";
+            position: absolute;
+            font-size: 14px;
+            left: 0px;
+            bottom: -2px;
+         }
       }
       span {
          display: inline-block;

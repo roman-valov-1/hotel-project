@@ -1,0 +1,54 @@
+form.price-form(action='')
+   .price-form__title-info
+      .price-form__title-number
+         h1 
+            | 333
+            span  люкс
+      .price-form__title-price
+         b 7990₽
+         |       в сутки
+   .price-form__date-section
+      .price-form__date-item
+         h3.price-form__subtitle прибытие
+         input.price-form__arrival(type='text' name='arrival' placeholder='ДД.ММ.ГГГГ')
+      .price-form__date-item
+         h3.price-form__subtitle выезд
+         input.price-form__departure(type='text' name='departure' placeholder='ДД.ММ.ГГГГ')
+   h3.price-form__subtitle гости
+   .price-form__guest-block
+      p Сколько гостей
+      .price-form__guest-dropdown
+         .price-form__dropdown-item
+            label(for='adult') взрослые
+            .price-form__dropdown-counter
+               button.price-form__counter-btn-minus(type='button') -
+               input#adult(type='text' name='adult' value='0' readonly='readonly')
+               button.price-form__counter-btn-plus(type='button') +
+         .price-form__dropdown-item
+            label(for='children') дети
+            .price-form__dropdown-counter
+               button.price-form__counter-btn-minus(type='button') -
+               input#children(type='text' name='children' value='0' readonly='readonly')
+               button.price-form__counter-btn-plus(type='button') +
+         .price-form__dropdown-footer
+            button#dropdown-btn-reset(type='button') очистить
+            button#dropdown-btn-submit(type='button') применить 
+   .price-form__options
+      .price-form__option-item
+         .price-form__option-days
+            | 7990₽ х 
+            span 4 
+            | суток
+         .price-form__option-days-price
+            | 31960₽
+      .price-form__option-item
+         .price-form__option-title
+            | Сбор за дополнительные услуги
+         .price-form__option-price
+            | 400₽
+   .price-form__total
+      .price-form__total-title
+         | Итого
+      .price-form__total-price
+         | 32360₽
+   button.price-form__button Забронировать

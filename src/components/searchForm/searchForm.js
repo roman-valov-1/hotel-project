@@ -51,13 +51,13 @@ dropdownSubmit.addEventListener('click', (e) => {
    guestDropdown.classList.remove('search-form__guest-dropdown_active');
    guestBlock.classList.remove('search-form__guest-block_active');
    if (inputAdult.value != 0 && inputChildren.value != 0) {
-      guestTitle.innerHTML = `Взрослые: ${inputAdult.value}, Дети: ${inputChildren.value}`;
+      guestTitle.textContent = `Взрослые: ${inputAdult.value}, Дети: ${inputChildren.value}`;
    } else if (inputAdult.value != 0 && inputChildren.value == 0) {
-      guestTitle.innerHTML = `Взрослые: ${inputAdult.value}`;
+      guestTitle.textContent = `Взрослые: ${inputAdult.value}`;
    } else if (inputAdult.value == 0 && inputChildren.value != 0) {
-      guestTitle.innerHTML = `Дети: ${inputChildren.value}`;
+      guestTitle.textContent = `Дети: ${inputChildren.value}`;
    } else {
-      guestTitle.innerHTML = `Сколько гостей`;
+      guestTitle.textContent = `Сколько гостей`;
    }
    guestTitle.classList.remove('_active');
 });
