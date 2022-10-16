@@ -3,12 +3,13 @@ import 'air-datepicker/air-datepicker.css';
 
 let dpMin = new AirDatepicker('.price-form__arrival', {
    minDate: new Date(),
+   maxDate: new Date('2023-03-19'),
    autoClose: true,
    position: "bottom left",
    selectedDates: new Date('2023-03-16'),
    onSelect({date}) {
       dpMax.update({
-         minDate: date
+         minDate: new Date(+date + 86400000)
       });
       dpMin.update({
          selectedDates: new Date(date)
@@ -24,16 +25,16 @@ let dpMin = new AirDatepicker('.price-form__arrival', {
 });
 
 let dpMax = new AirDatepicker('.price-form__departure', {
-   minDate: new Date('2023-03-16'),
+   minDate: new Date('2023-03-17'),
    autoClose: true,
    position: "bottom right",
    selectedDates: new Date('2023-03-20'),
    onSelect({date}) {
       dpMin.update({
-         maxDate: date
+         maxDate: new Date(+date - 86400000)
       });
       dpMax.update({
-         selectedDates: new Date(date)
+         selectedDates: new Date(date),
       });
    },
    onShow() {
