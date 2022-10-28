@@ -21,6 +21,7 @@ function closeAllSubMenu(elem) {
       if (elem == item) return;
       if (item.classList.contains('header__submenu_active')) {
          item.classList.remove('header__submenu_active');
+         item.previousElementSibling.classList.remove('active');
       }
    });
 }
