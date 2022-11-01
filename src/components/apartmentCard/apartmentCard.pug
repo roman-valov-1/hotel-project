@@ -8,9 +8,11 @@
       .apartment-card__slider-item
         img(src='assets/apartment-three.png' alt='')
       button.apartment-card__slider-btn-prev
-        img(src='assets/slider_prev.svg' alt='')
+        svg 
+          use(xlink:href='assets/sprite.svg#slider-arrow-prev')
       button.apartment-card__slider-btn-next
-        img(src='assets/slider_next.svg' alt='')
+        svg 
+          use(xlink:href='assets/sprite.svg#slider-arrow-next')
       .apartment-card__slider-dots
          span.apartment-card__slider-dot
          span.apartment-card__slider-dot
@@ -25,11 +27,16 @@
         |  в сутки
     .apartment-card__info-bottom
       .apartment-card__info-rating
-        img(src='assets/star.svg' alt='')
-        img(src='assets/star.svg' alt='')
-        img(src='assets/star.svg' alt='')
-        img(src='assets/star.svg' alt='')
-        img(src='assets/star-outline.svg' alt='')
+        svg
+          use(xlink:href='assets/sprite.svg#star')
+        svg
+          use(xlink:href='assets/sprite.svg#star')
+        svg
+          use(xlink:href='assets/sprite.svg#star')
+        svg
+          use(xlink:href='assets/sprite.svg#star')
+        svg
+          use(xlink:href='assets/sprite.svg#star-outline')
       .apartment-card__info-review
         b 145
         |  Отзывов

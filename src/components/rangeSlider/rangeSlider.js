@@ -6,17 +6,17 @@ let sliderInnerLine = document.querySelector('.range-slider__line-inner');
 let minPriceInput = document.querySelector('#minPrice');
 let maxPriceInput = document.querySelector('#maxPrice');
 
-let minValueInput = 0;
-let maxValueInput = 20000;
-let availableValueInput = maxValueInput - minValueInput;
-let valueCoefficient = availableValueInput / (slider.offsetWidth); 
-console.log(valueCoefficient);
-console.log(slider.offsetWidth);
-
 minPriceInput.setAttribute('value', 0 + '₽');
 maxPriceInput.setAttribute('value', 20000 + '₽');
 minPriceInput.disabled = true;
-maxPriceInput.disabled= true;
+maxPriceInput.disabled = true;
+
+let minValueInput = 0;
+let maxValueInput = 20000;
+let availableValueInput = maxValueInput - minValueInput;
+let valueCoefficient = availableValueInput / (
+   maxPricePointer.getBoundingClientRect().left + 8 - minPricePointer.getBoundingClientRect().left + 8 
+);
 
 minPricePointer.onmousedown = function (e) {
    e.preventDefault();
@@ -53,10 +53,6 @@ minPricePointer.onmousedown = function (e) {
    }
 };
 
-minPricePointer.ondragstart = function () {
-   return false;
-};
-
 maxPricePointer.onmousedown = function (e) {
    e.preventDefault();
 
@@ -91,7 +87,4 @@ maxPricePointer.onmousedown = function (e) {
    }
 };
 
-maxPricePointer.ondragstart = function () {
-   return false;
-};
 

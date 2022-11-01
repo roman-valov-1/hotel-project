@@ -36,9 +36,10 @@
       border: none;
       cursor: pointer;
       user-select: none;
-      img {
+      svg {
          width: 20px;
          height: 20px;
+         fill: #fff;
       }
    }
 
@@ -126,6 +127,11 @@
    }
 
    &__info-rating {
+      svg {
+         width: 24px;
+         height: 24px;
+         fill: $purple;
+      }
    }
 
    &__info-review {
