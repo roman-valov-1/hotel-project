@@ -7,6 +7,7 @@ let dpMin = new AirDatepicker('.price-form__arrival', {
    autoClose: true,
    position: "bottom left",
    selectedDates: new Date('2023-03-16'),
+   dynamicRange: true,
    onSelect({date}) {
       dpMax.update({
          minDate: new Date(+date + 86400000)
@@ -29,6 +30,7 @@ let dpMax = new AirDatepicker('.price-form__departure', {
    autoClose: true,
    position: "bottom right",
    selectedDates: new Date('2023-03-20'),
+   dynamicRange: true,
    onSelect({date}) {
       dpMin.update({
          maxDate: new Date(+date - 86400000)

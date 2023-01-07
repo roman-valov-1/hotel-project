@@ -1,0 +1,104 @@
+.apartment-reviews {
+   display: flex;
+   flex-direction: column;
+   max-width: 700px;
+   padding: 10px;
+   margin-top: 50px;
+   &__top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+   }
+
+   &__title {
+      font-size: 19px;
+      line-height: 24px;
+      font-weight: 700;
+      color: $dark;
+   }
+
+   &__number-reviews {
+      font-size: 14px;
+      line-height: 14px;
+      color: $dark50;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+}
+.review-item {
+   display: flex;
+   flex-direction: row;
+   gap: 15px;
+   &__author {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+   }
+
+   &__author-avatar {
+      width: 48px;
+      height: 48px;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__review-likes {
+      width: 40px;
+      height: 20px;
+      font-size: 12px;
+      line-height: 12px;
+      color: $purple;
+      border: 1px solid $purple;
+      border-radius: 10px;
+      text-align: left;
+      padding: 3px 3px 3px 18px;
+      position: relative;
+      &::before {
+         content: '';
+         position: absolute;
+         background-image: url('./../assets/like-outline.svg');
+         width: 10px;
+         height: 8px;
+         left: 5px;
+         top: 5px;
+      }
+      &.review-item__review-likes_active {
+         &::before {
+            content: '';
+            position: absolute;
+            background-image: url('./../assets/like-active.svg');
+            width: 10px;
+            height: 8px;
+            left: 5px;
+            top: 5px;
+         }
+      }
+   }
+
+   &__content {
+      font-size: 14px;
+      line-height: 24px;
+      color: $dark75;
+   }
+
+   &__author-name {
+      font-weight: 700;
+   }
+
+   &__review-date {
+      margin-bottom: 10px;
+   }
+
+   &__review-text {
+   }
+}

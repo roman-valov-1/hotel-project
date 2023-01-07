@@ -13,6 +13,7 @@ navList.addEventListener('click', (e) => {
 menuBurger.addEventListener('click', (e) => {
    e.target.classList.toggle('header__burger_active');
    menuBody.classList.toggle('header__menu_active');
+   closeAllSubMenu();
    document.body.classList.toggle('lock');
 });
 
