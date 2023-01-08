@@ -30,6 +30,7 @@
       top: 30px;
       background-color: #fff;
       border: 1px solid $purple;
+      border-radius: 5px;
       &.header__submenu_active {
          display: block;
       }
@@ -89,6 +90,16 @@
          padding-top: 10px;
          &::after {
             display: none;
+         }
+      }
+   }
+}
+
+@media (min-width: 992px) {
+   .header {
+      &__submenu-item {
+         &:hover {
+            background-color: $dark5;
          }
       }
    }

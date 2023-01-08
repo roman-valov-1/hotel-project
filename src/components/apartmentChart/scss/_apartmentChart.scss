@@ -1,0 +1,100 @@
+.apartment-chart {
+   min-width: 300px;
+   width: 100%;
+   max-width: 320px;
+   padding: 10px;
+   margin-top: 50px;
+
+   &__title {
+      margin-bottom: 20px;
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__chart-container {
+      position: relative;
+      width: 120px;
+      height: 120px;
+   }
+
+   &__chart-item {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background: conic-gradient($purple 0% 24.9%, $green 25% 49.9%, #ffba9c 50% 100%);
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+   }
+
+   &__chart-inner {
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      left: 5px;
+      top: 5px;
+      z-index: 20;
+      background-color: #fff;
+   }
+
+   &__chart-text {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: $purple;
+      span {
+         font-size: 19px;
+      }
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding-left: 15px;
+   }
+
+   &__list-item {
+      position: relative;
+      &::before {
+         content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         left: -15px;
+         top: 3px;
+         border-radius: 50%;
+      }
+      &.excellent {
+         &::before{
+            background-color: #ffba9c;
+         } 
+      }
+      &.good {
+         &::before{
+            background-color: $green;
+         }
+      }
+      &.bad {
+         &::before{
+            background-color: $purple;
+         }
+      }
+      &.terrible {
+         &::before{
+            background-color: #3D4975;
+         }
+      }
+   }
+}

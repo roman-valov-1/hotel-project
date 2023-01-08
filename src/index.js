@@ -13,4 +13,7 @@ import apartmentOne from './assets/apartment-one.png';
 import apartmentTwo from './assets/apartment-two.png';
 import apartmentThree from './assets/apartment-three.png';
 
+import userOne from './assets/user-one.png';
+import userTwo from './assets/user-two.png';
+
 import sprite from './assets/sprite.svg';

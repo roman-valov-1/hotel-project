@@ -1,0 +1,57 @@
+.apartment-rules {
+   display: flex;
+   flex-direction: row;
+   gap: 50px;
+   max-width: 700px;
+   margin-top: 50px;
+   padding: 10px;
+   &__section {
+      padding-left: 20px;
+      min-width: 250px;
+   }
+
+   &__section-title {
+      margin-bottom: 20px;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+   }
+
+   &__list-item {
+      line-height: 24px;
+      position: relative;
+      &::before {
+         content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         border-radius: 50%;
+         background-color: $purple;
+         left: -15px;
+         top: 7px;
+      }
+   }
+
+   &__cancel {
+   }
+
+   &__cancel-title {
+      margin-bottom: 20px;
+   }
+
+   &__cancel-text {
+      line-height: 24px;
+   }
+}
+
+@media (max-width: 575.98px) {
+   .apartment-rules {
+      flex-direction: column;
+      &__cancel {
+         padding-left: 20px;
+      }
+   }
+}
