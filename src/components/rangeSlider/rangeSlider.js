@@ -6,17 +6,18 @@ let sliderInnerLine = document.querySelector('.range-slider__line-inner');
 let minPriceInput = document.querySelector('#minPrice');
 let maxPriceInput = document.querySelector('#maxPrice');
 
-minPriceInput.setAttribute('value', 0 + '₽');
-maxPriceInput.setAttribute('value', 20000 + '₽');
-minPriceInput.disabled = true;
-maxPriceInput.disabled = true;
-
 let minValueInput = 0;
 let maxValueInput = 20000;
 let availableValueInput = maxValueInput - minValueInput;
 let valueCoefficient = availableValueInput / (
    maxPricePointer.getBoundingClientRect().left + 8 - minPricePointer.getBoundingClientRect().left + 8 
 );
+
+minPriceInput.setAttribute('value', minValueInput + '₽');
+maxPriceInput.setAttribute('value', maxValueInput + '₽');
+minPriceInput.disabled = true;
+maxPriceInput.disabled = true;
+
 
 minPricePointer.onmousedown = function (e) {
    e.preventDefault();

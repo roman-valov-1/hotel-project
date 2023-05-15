@@ -89,10 +89,15 @@
       @extend %default-input;
       position: relative;
       overflow: visible;
+      &:has(p:focus) {
+         border-color: $dark50;
+      }
       p {
          display: block;
          position: relative;
          cursor: pointer;
+         outline: none;
+         color: $dark75;
          &:after {
             content: "";
             background: url("./../assets/header-menu-arrow.svg") no-repeat center;

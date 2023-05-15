@@ -8,6 +8,7 @@ let dpMin = new AirDatepicker('.price-form__arrival', {
    position: "bottom left",
    selectedDates: new Date('2023-03-16'),
    dynamicRange: true,
+   isMobile: false,
    onSelect({date}) {
       dpMax.update({
          minDate: new Date(+date + 86400000)
@@ -17,7 +18,7 @@ let dpMin = new AirDatepicker('.price-form__arrival', {
       });
    },
    onShow() {
-      dpMin.$el.parentElement.classList.add('price-form__date-item_active'); 
+      dpMin.$el.parentElement.classList.add('price-form__date-item_active');
    },
    onHide() {
       dpMin.$el.parentElement.classList.remove('price-form__date-item_active');
@@ -31,6 +32,7 @@ let dpMax = new AirDatepicker('.price-form__departure', {
    position: "bottom right",
    selectedDates: new Date('2023-03-20'),
    dynamicRange: true,
+   isMobile: false,
    onSelect({date}) {
       dpMin.update({
          maxDate: new Date(+date - 86400000)
@@ -78,7 +80,13 @@ let guestBlock = document.querySelector('.price-form__guest-block');
 let dropdownSubmit = document.querySelector('#dropdown-btn-submit');
 let dropdownReset = document.querySelector('#dropdown-btn-reset');
 
-guestTitle.addEventListener('click', (e) => {
+// guestTitle.addEventListener('click', (e) => {
+//    guestDropdown.classList.add('price-form__guest-dropdown_active');
+//    guestBlock.classList.add('price-form__guest-block_active');
+//    guestTitle.classList.add('_active');
+// });
+
+guestTitle.addEventListener('focus', (e) => {
    guestDropdown.classList.add('price-form__guest-dropdown_active');
    guestBlock.classList.add('price-form__guest-block_active');
    guestTitle.classList.add('_active');

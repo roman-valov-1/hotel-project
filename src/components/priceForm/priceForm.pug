@@ -16,19 +16,19 @@ form.price-form(action='')
          input.price-form__departure(type='text' name='departure' placeholder='ДД.ММ.ГГГГ')
    h3.price-form__subtitle гости
    .price-form__guest-block
-      p Сколько гостей
+      p(tabindex="0") Сколько гостей
       .price-form__guest-dropdown
          .price-form__dropdown-item
             label(for='adult') взрослые
             .price-form__dropdown-counter
                button.price-form__counter-btn-minus(type='button') -
-               input#adult(type='text' name='adult' value='0' readonly='readonly')
+               input#adult(type='text' name='adult' value='0' readonly='readonly' tabindex="-1")
                button.price-form__counter-btn-plus(type='button') +
          .price-form__dropdown-item
             label(for='children') дети
             .price-form__dropdown-counter
                button.price-form__counter-btn-minus(type='button') -
-               input#children(type='text' name='children' value='0' readonly='readonly')
+               input#children(type='text' name='children' value='0' readonly='readonly' tabindex="-1")
                button.price-form__counter-btn-plus(type='button') +
          .price-form__dropdown-footer
             button#dropdown-btn-reset(type='button') очистить

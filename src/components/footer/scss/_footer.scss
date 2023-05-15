@@ -2,7 +2,7 @@
    margin-top: 100px;
    background-color: #fff;
    &__line {
-      border-top: 1px solid #E5E5E5;
+      border-top: 1px solid #e5e5e5;
    }
    &__info {
       display: flex;
@@ -77,10 +77,17 @@
       cursor: pointer;
       width: 18px;
       height: 18px;
+      outline: none;
       svg {
          width: 100%;
          height: 100%;
          fill: $purple;
+      }
+      &:hover,
+      &:focus {
+         svg {
+            fill: $green;
+         }
       }
    }
 
@@ -104,10 +111,17 @@
          display: block;
          width: 24px;
          height: 24px;
+         outline: none;
          svg {
             width: 100%;
             height: 100%;
             fill: $purple;
+         }
+         &:hover,
+         &:focus {
+            svg {
+               fill: $green;
+            }
          }
       }
    }
@@ -139,12 +153,12 @@
          justify-content: initial;
          align-items: center;
       }
-   
+
       &__footer-license {
          text-align: center;
          padding-bottom: 25px;
       }
-   
+
       &__footer-socialmedia {
          a:first-child {
             margin-left: 0px;

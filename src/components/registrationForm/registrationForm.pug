@@ -5,25 +5,25 @@ form.registration-form(action='')
   input.registration-form__input-item(type='text' placeholder='Фамилия')
   .registration-form__radio-block
     label.registration-form__radio-item(for='male')
-      input#male(type='radio' name='gender' value='male' checked)
+      input#male(type='radio' name='gender' value='male' checked tabindex="-1")
       span.registration-form__radio-button
-      span Мужчина
+      span(tabindex="0") Мужчина
     label.registration-form__radio-item(for='female')
-      input#female(type='radio' name='gender' value='female')
+      input#female(type='radio' name='gender' value='female' )
       span.registration-form__radio-button
-      span Женщина
+      span(tabindex="0") Женщина
   h3.registration-form__subtitle
     | дата рождения
-  input.registration-form__input-date(type='date' name='birthdayDate' placeholder='ДД.ММ.ГГГГ')
+  input.registration-form__input-date(inputmode='numeric' pattern="[0-3][0-9].[0-1][0-9].[0-9]{4}" name='birthdayDate' placeholder='ДД.ММ.ГГГГ')
   h3.registration-form__subtitle
     | данные для входа в сервис
   input.registration-form__input-item(type='email' placeholder='Email')
   input.registration-form__input-item(type='password' placeholder='Пароль')
   .registration-form__switch-block
-    label.registration-form__switch(for='switch')
+    div.registration-form__switch
       input#switch(type='checkbox' name='subscribe' value='subscribe')
       span.registration-form__switch-slider
-    span Получать спецпредложения
+    label(tabindex="0" for="switch") Получать спецпредложения
   button.registration-form__button(type='subscribe')
     | перейти к оплате
   .registration-form__link-block

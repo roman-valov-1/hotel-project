@@ -41,7 +41,12 @@
          }
       }
       span {
+         outline: none;
          cursor: pointer;
+         &:hover,
+         &:focus {
+            color: $dark;
+         }
       }
    }
 
@@ -53,6 +58,7 @@
       height: 20px;
       border: 1px solid $dark25;
       border-radius: 50%;
+      outline: none;
       &::after {
          content: "";
          position: absolute;
@@ -86,14 +92,18 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      & > span {
-         cursor: default;
+      label {
+         cursor: pointer;
+         outline: none;
+         &:hover,
+         &:focus {
+            color: $dark;
+         }
       }
    }
 
    &__switch {
       margin-right: 10px;
-      cursor: pointer;
       input {
          display: none;
       }

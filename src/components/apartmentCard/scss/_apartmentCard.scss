@@ -36,10 +36,17 @@
       border: none;
       cursor: pointer;
       user-select: none;
+      outline: none;
       svg {
          width: 20px;
          height: 20px;
          fill: #fff;
+      }
+      &:hover,
+      &:focus {
+         svg {
+            fill: $purple;
+         }
       }
    }
 

@@ -17,12 +17,14 @@
       line-height: 24px;
       font-weight: 700;
       color: $dark;
+      padding-right: 20px;
    }
 
    &__number-reviews {
       font-size: 14px;
       line-height: 14px;
       color: $dark50;
+      text-align: center;
    }
 
    &__list {

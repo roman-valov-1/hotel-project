@@ -10,13 +10,15 @@
    font-weight: 700;
    border: none;
    cursor: pointer;
+   outline: none;
 }
 
 %button-transparent {
    background-color: #fff;
    border: 2px solid $purple;
    color: $purple;
-   &:hover {
+   &:hover,
+   &:focus {
       color: $green;
       border: 2px solid $green;
       transition: 0.3s all ease;
@@ -27,7 +29,8 @@
    background: $primaryGradient;
    color: #fff;
    position: relative;
-   &:hover {
+   &:hover,
+   &:focus {
       background: $secondaryGradient;
       transition: 0.3s all ease;
    }
@@ -48,7 +51,9 @@
    font-weight: 400;
    font-size: 14px;
    line-height: 17px;
-   &:hover {
+   outline: none;
+   &:hover,
+   &:focus {
       color: $dark;
       transition: 0.3s ease all;
    }
