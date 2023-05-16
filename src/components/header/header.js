@@ -5,10 +5,20 @@ let menuBurger = document.querySelector('.header__burger');
 
 navList.addEventListener('click', (e) => {
    if (e.target.nodeName != 'SPAN') return;
+
    closeAllSubMenu(e.target.nextElementSibling);
    e.target.classList.toggle('active');
    e.target.nextElementSibling.classList.toggle('header__submenu_active');
 });
+
+navList.addEventListener('keyup', (e) => {
+   if (e.code != "Enter") return;
+   
+   closeAllSubMenu(e.target.nextElementSibling);
+   e.target.classList.toggle('active');
+   e.target.nextElementSibling.classList.toggle('header__submenu_active');
+});
+
 
 menuBurger.addEventListener('click', (e) => {
    e.target.classList.toggle('header__burger_active');

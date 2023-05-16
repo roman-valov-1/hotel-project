@@ -192,9 +192,18 @@
          color: $dark25;
          font-size: 20px;
          font-weight: 700;
+         transition: all .2s ease;
          cursor: pointer;
+         outline: none;
+         &:hover,
+         &:focus {
+            border-color: $green;
+            color: $green;
+         }
          &:disabled {
+            pointer-events: none;
             opacity: 0.3;
+            cursor: default;
          }
       }
    }
@@ -305,7 +314,13 @@
    line-height: 15px;
    text-transform: uppercase;
    color: $purple;
+   transition: all .2s ease;
    cursor: pointer;
+   outline: none;
+   &:hover,
+   &:focus {
+      color: $green;
+   }
 }
 
 #dropdown-btn-reset {
