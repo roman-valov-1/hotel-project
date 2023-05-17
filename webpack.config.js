@@ -13,6 +13,7 @@ module.exports = {
    mode: mode,
    entry: {
       bundle: path.resolve(__dirname, './src/index.js'),
+      loginPage: path.resolve(__dirname, './src/pages/loginPage/loginPage.js')
    },
    output: {
       path: path.resolve(__dirname, 'dist'),
@@ -40,9 +41,14 @@ module.exports = {
          filename: '[name].[contenthash].css'
       }),
       new HtmlWebpackPlugin({
-         template: "./src/index.pug",
-         filename: 'index.html'
-      })],
+         template: "./src/pages/main/main.pug",
+         filename: 'main.html'
+      }),
+      new HtmlWebpackPlugin({
+         template: "./src/pages/loginPage/loginPage.pug",
+         filename: 'loginPage.html'
+      })
+   ],
    module: {
       rules: [
          {
