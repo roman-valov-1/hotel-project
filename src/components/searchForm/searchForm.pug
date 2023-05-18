@@ -13,14 +13,14 @@ form.search-form(action='')
   h3.search-form__subtitle
     | гости
   .search-form__guest-block
-    p Сколько гостей
+    p(tabindex="0") Сколько гостей
     .search-form__guest-dropdown
       .search-form__dropdown-item
         label(for='adult') взрослые
         .search-form__dropdown-counter
           button.search-form__counter-btn-minus(type='button')
             | -
-          input#adult(type='text' name='adult' value='0' readonly)
+          input#adult(type='text' name='adult' value='0' readonly tabindex="-1")
           button.search-form__counter-btn-plus(type='button')
             | +
       .search-form__dropdown-item
@@ -28,7 +28,7 @@ form.search-form(action='')
         .search-form__dropdown-counter
           button.search-form__counter-btn-minus(type='button')
             | -
-          input#children(type='text' name='children' value='0' readonly)
+          input#children(type='text' name='children' value='0' readonly tabindex="-1")
           button.search-form__counter-btn-plus(type='button')
             | +
       .search-form__dropdown-footer 

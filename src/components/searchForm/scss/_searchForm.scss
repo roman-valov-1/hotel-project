@@ -7,7 +7,6 @@
    border: 1px solid rgba(0, 0, 0, 0.12);
    box-shadow: $borderShadow;
    border-radius: 4px;
-   margin-top: 50px;
    &__title {
       margin-bottom: 20px;
    }
@@ -58,10 +57,15 @@
       @extend %default-input;
       position: relative;
       overflow: visible;
+      &:has(p:focus) {
+         border-color: $dark50;
+      }
       p {
          display: block;
          position: relative;
          cursor: pointer;
+         outline: none;
+         color: $dark75;
          &:after {
             content: "";
             background: url("./../assets/header-menu-arrow.svg") no-repeat center;
@@ -156,9 +160,18 @@
          color: $dark25;
          font-size: 20px;
          font-weight: 700;
+         transition: all .2s ease;
          cursor: pointer;
+         outline: none;
+         &:hover,
+         &:focus {
+            border-color: $green;
+            color: $green;
+         }
          &:disabled {
+            pointer-events: none;
             opacity: 0.3;
+            cursor: default;
          }
       }
    }
@@ -186,6 +199,12 @@
    text-transform: uppercase;
    color: $purple;
    cursor: pointer;
+   transition: all .2s ease;
+   outline: none;
+   &:hover,
+   &:focus {
+      color: $green;
+   }
 }
 
 #dropdown-btn-reset {

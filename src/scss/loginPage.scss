@@ -1,3 +1,6 @@
+@import './style.scss';
+@import "./../components/loginForm/scss/_loginForm";
+
 .login-page__content {
    flex: 1 1 100%;
    display: flex;
@@ -5,7 +8,7 @@
    align-items: center;
    justify-content: center;
    min-height: calc(100vh - 4.375rem);
-   background: url('./../../assets/background_one.jpg') no-repeat center;
+   background: url('./../assets/background_one.jpg') no-repeat center;
    background-size: cover;
    padding: 30px 0px;
 }

@@ -1,5 +1,4 @@
+import './../../index.js';
+import './../../components/header/header.js';
 
-import './loginPage.scss';
-
-
-import background from './../../assets/background_one.jpg';
+import "./../../scss/loginPage.scss";

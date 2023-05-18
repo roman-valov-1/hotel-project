@@ -80,12 +80,6 @@ let guestBlock = document.querySelector('.price-form__guest-block');
 let dropdownSubmit = document.querySelector('#dropdown-btn-submit');
 let dropdownReset = document.querySelector('#dropdown-btn-reset');
 
-// guestTitle.addEventListener('click', (e) => {
-//    guestDropdown.classList.add('price-form__guest-dropdown_active');
-//    guestBlock.classList.add('price-form__guest-block_active');
-//    guestTitle.classList.add('_active');
-// });
-
 guestTitle.addEventListener('focus', (e) => {
    guestDropdown.classList.add('price-form__guest-dropdown_active');
    guestBlock.classList.add('price-form__guest-block_active');

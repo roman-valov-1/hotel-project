@@ -1,10 +1,9 @@
-import './scss/style.scss';
-import './components/header/header.js';
-import './components/apartmentCard/apartmentCard.js';
+// import './components/header/header.js';
+// import './components/apartmentCard/apartmentCard.js';
 // import './components/searchForm/searchForm.js';
-import './components/priceForm/priceForm.js';
-import './components/rangeSlider/rangeSlider.js';
-import './components/registrationForm/registrationForm.js';
+// import './components/priceForm/priceForm.js';
+// import './components/rangeSlider/rangeSlider.js';
+// import './components/registrationForm/registrationForm.js';
 
 import Logo from './assets/Logo.svg';
 import headerMenuArrow from './assets/header-menu-arrow.svg';

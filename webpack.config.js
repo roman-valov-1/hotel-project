@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === 'production') {
 module.exports = {
    mode: mode,
    entry: {
-      bundle: path.resolve(__dirname, './src/index.js'),
+      main: path.resolve(__dirname, './src/pages/main/main.js'),
       loginPage: path.resolve(__dirname, './src/pages/loginPage/loginPage.js')
    },
    output: {

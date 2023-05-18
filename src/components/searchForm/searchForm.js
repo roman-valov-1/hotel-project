@@ -41,7 +41,7 @@ let guestBlock = document.querySelector('.search-form__guest-block');
 let dropdownSubmit = document.querySelector('#dropdown-btn-submit');
 let dropdownReset = document.querySelector('#dropdown-btn-reset');
 
-guestTitle.addEventListener('click', (e) => {
+guestTitle.addEventListener('focus', (e) => {
    guestDropdown.classList.add('search-form__guest-dropdown_active');
    guestBlock.classList.add('search-form__guest-block_active');
    guestTitle.classList.add('_active');
