@@ -8,6 +8,9 @@
 .header {
    background: #fff;
    &__logo {
+      a {
+         display: inline-block;
+      }
    }
    &__burger {
       display: none;

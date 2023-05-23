@@ -13,7 +13,8 @@ module.exports = {
    mode: mode,
    entry: {
       main: path.resolve(__dirname, './src/pages/main/main.js'),
-      loginPage: path.resolve(__dirname, './src/pages/loginPage/loginPage.js')
+      loginPage: path.resolve(__dirname, './src/pages/loginPage/loginPage.js'),
+      registrationPage: path.resolve(__dirname, './src/pages/registrationPage/registrationPage.js'),
    },
    output: {
       path: path.resolve(__dirname, 'dist'),
@@ -34,7 +35,7 @@ module.exports = {
    optimization: {
       splitChunks: {
          chunks: 'all'
-      }
+      },
    },
    plugins: [
       new MiniCssExtractPlugin({
@@ -42,11 +43,18 @@ module.exports = {
       }),
       new HtmlWebpackPlugin({
          template: "./src/pages/main/main.pug",
-         filename: 'main.html'
+         filename: 'main.html',
+         chunks: ['main']
       }),
       new HtmlWebpackPlugin({
          template: "./src/pages/loginPage/loginPage.pug",
-         filename: 'loginPage.html'
+         filename: 'loginPage.html',
+         chunks: ['loginPage']
+      }),
+      new HtmlWebpackPlugin({
+         template: "./src/pages/registrationPage/registrationPage.pug",
+         filename: 'registrationPage.html',
+         chunks: ['registrationPage']
       })
    ],
    module: {

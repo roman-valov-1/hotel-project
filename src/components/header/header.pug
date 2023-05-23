@@ -2,7 +2,8 @@ header.header
   .container
     .header-container
       .header__logo
-        img(src='assets/Logo.svg' alt='логотип')
+        a(href='main.html')
+          img(src='assets/Logo.svg' alt='логотип')
       div.header__burger
         span
       nav.header__menu
@@ -32,5 +33,5 @@ header.header
               li.header__submenu-item
                 a(href='#') Соглашения 3
         .header__autorization-block
-          a.header__button.header__button_transparent(href='#') войти
-          a.header__button.header__button_purple(href='#') зарегистрироваться
+          a.header__button.header__button_transparent(href='./loginPage.html') войти
+          a.header__button.header__button_purple(href='./registrationPage.html') зарегистрироваться
