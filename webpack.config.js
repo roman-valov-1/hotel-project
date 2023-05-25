@@ -15,6 +15,7 @@ module.exports = {
       main: path.resolve(__dirname, './src/pages/main/main.js'),
       loginPage: path.resolve(__dirname, './src/pages/loginPage/loginPage.js'),
       registrationPage: path.resolve(__dirname, './src/pages/registrationPage/registrationPage.js'),
+      apartmentPage: path.resolve(__dirname, './src/pages/apartmentPage/apartmentPage.js'),
    },
    output: {
       path: path.resolve(__dirname, 'dist'),
@@ -55,6 +56,11 @@ module.exports = {
          template: "./src/pages/registrationPage/registrationPage.pug",
          filename: 'registrationPage.html',
          chunks: ['registrationPage']
+      }),
+      new HtmlWebpackPlugin({
+         template: "./src/pages/apartmentPage/apartmentPage.pug",
+         filename: 'apartmentPage.html',
+         chunks: ['apartmentPage']
       })
    ],
    module: {

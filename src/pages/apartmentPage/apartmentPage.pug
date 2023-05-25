@@ -1,0 +1,23 @@
+extends ../../layout
+
+block .content
+   .apartment-wrapper
+      .apartment-photos
+         .apartment-photos__slider 
+         .apartment-photos__collage
+            .apartment-photos__collage-item
+               .apartment-photos__collage-image 
+                  img(src='assets/collage_1.jpg') 
+            .apartment-photos__collage-item
+               .apartment-photos__collage-image 
+                  img(src='assets/collage_2.jpg')
+               .apartment-photos__collage-image 
+                  img(src='assets/collage_3.jpg')
+      .apartment-content
+         .apartment-content__info
+            include ./../../components/apartmentInfo/apartmentInfo.pug
+            include ./../../components/apartmentChart/apartmentChart.pug
+            include ./../../components/apartmentReviews/apartmentReviews.pug
+            include ./../../components/apartmentRules/apartmentRules.pug
+         .apartment-info__sidebar 
+            include ./../../components/priceForm/priceForm.pug 
