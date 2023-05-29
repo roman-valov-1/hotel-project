@@ -1,7 +1,9 @@
 .price-form {
    display: flex;
    flex-direction: column;
-   width: 380px;
+   max-width: 380px;
+   width: 100%;
+   min-width: 350px;
    padding: 40px 30px 30px 30px;
    background: #ffffff;
    border: 1px solid rgba(0, 0, 0, 0.12);
@@ -47,6 +49,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      gap: 10px;
    }
 
    &__date-item {
@@ -332,8 +335,9 @@
 @media (max-width: 575.98px) {
    .price-form {
       max-width: 100%;
-      border: 0px;
-      box-shadow: none;
+      padding: 20px 15px;
+      width: 100%;
+      min-width: 310px;
       &__date-item {
          flex: 0 1 120px;
          &:after {
