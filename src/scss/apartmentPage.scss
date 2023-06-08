@@ -5,6 +5,8 @@
 @import './../components/apartmentRules/scss/_apartmentRules';
 @import './../components/priceForm/scss/_priceForm';
 
+@import "./../components/apartmentCard/scss/_apartmentCard";
+
 .apartment-wrapper {
    border-bottom: 1px solid $dark5;
    display: flex;
